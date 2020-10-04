@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Credit Card Payment Screen</title>
+    </head>
+    <body>
+        <h2>Credit Card Information Entry Screen</h2>
+        <p>Please enter your credit card information in the form below to complete your purchase.</p>
+
+        <form action="/" method="post" name="form" enctype="application/json">
+            <h2>Information Form</h2>
+            <label for="name_tag">Name:</label>
+            <input id="name_tag" type="text" name="name" placeholder="First and Last Name" >
+            <br>
+            <label for="card_number_tag">Credit Card Number:</label>
+            <input id="card_number_tag" type="text" name="card_number">
+            <br>
+            <label for="exp_date_tag">Expiration Date:</label>
+            <input id="exp_date_tag" type="text" name="exp_date" placeholder="MM/YY">
+            <br>
+            <label for="zip_code_tag">Zip Code:</label>
+            <input id="zip_code_tag" type="number" name="zip_code">
+            <br>
+            <label for="purchase_amt_tag">Purchase Amount:</label>
+            <input id="purchase_amt_tag" type="number" name="purchase_amt" placeholder="0.00">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
