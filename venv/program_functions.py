@@ -4,11 +4,6 @@ import random
 import string
 
 
-def post_json_to_dictionary(post_data):
-    data_set = json.load(post_data)
-    
-    return data_set
-
 def create_authorization_code():
     """
     Create an authorization code through the creation of a string of random letters and numbers
@@ -18,6 +13,19 @@ def create_authorization_code():
     authorization_code = ''.join((random.choice(letters_numbers) for i in range(10)))
 
     return authorization_code
+
+def mask_credit_card(data_set):
+    """
+    Take the credit card number provided by the user, and truncate it to the last four numbers.
+    :param data_set: Dictionary provided by the customer
+    :return: String containing the last four digits of the credit card number
+    """
+
+    credit_card_num = data_set.get('card_number')
+    last_four_num = credit_card_num[-4:]
+    
+    return last_four_num
+
 
 def approve_deny_transaction(data_set):
     """
